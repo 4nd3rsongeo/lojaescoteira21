@@ -1,0 +1,14 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/admin/[[...nextadmin]]/page": "/admin/[[...nextadmin]]",
+  "/api/admin/[[...nextadmin]]/route": "/api/admin/[[...nextadmin]]",
+  "/api/auth/[...nextauth]/route": "/api/auth/[...nextauth]",
+  "/estoque/editar/[id]/page": "/estoque/editar/[id]",
+  "/estoque/novo/page": "/estoque/novo",
+  "/estoque/page": "/estoque",
+  "/login/page": "/login",
+  "/page": "/",
+  "/vendas/dashboard/page": "/vendas/dashboard",
+  "/vendas/page": "/vendas"
+}

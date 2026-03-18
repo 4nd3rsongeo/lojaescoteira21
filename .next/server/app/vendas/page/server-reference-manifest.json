@@ -1,0 +1,35 @@
+{
+  "node": {
+    "003243da54dc5e18829604f9301c3bc33feab76ecc": {
+      "workers": {
+        "app/vendas/page": {
+          "moduleId": 16663,
+          "async": true,
+          "exportedName": "signOut",
+          "filename": "src/lib/actions.ts"
+        }
+      },
+      "layer": {
+        "app/vendas/page": "action-browser"
+      },
+      "exportedName": "signOut",
+      "filename": "src/lib/actions.ts"
+    },
+    "406b37ecba2a13a2634981dc811fbd88bf1354f353": {
+      "workers": {
+        "app/vendas/page": {
+          "moduleId": 16663,
+          "async": true,
+          "exportedName": "createSale",
+          "filename": "src/lib/actions.ts"
+        }
+      },
+      "layer": {
+        "app/vendas/page": "action-browser"
+      },
+      "exportedName": "createSale",
+      "filename": "src/lib/actions.ts"
+    }
+  },
+  "edge": {}
+}

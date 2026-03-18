@@ -1,0 +1,20 @@
+{
+  "node": {
+    "00bd2df43a2823f051fe30f77c823410225afadfae": {
+      "workers": {
+        "app/page": {
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "signOut",
+          "filename": "src/lib/actions.ts"
+        }
+      },
+      "layer": {
+        "app/page": "action-browser"
+      },
+      "exportedName": "signOut",
+      "filename": "src/lib/actions.ts"
+    }
+  },
+  "edge": {}
+}

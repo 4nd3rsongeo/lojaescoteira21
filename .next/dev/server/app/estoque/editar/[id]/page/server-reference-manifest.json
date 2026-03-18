@@ -1,0 +1,35 @@
+{
+  "node": {
+    "00bd2df43a2823f051fe30f77c823410225afadfae": {
+      "workers": {
+        "app/estoque/editar/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/estoque/editar/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/estoque/novo/page.tsx [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "signOut",
+          "filename": "src/lib/actions.ts"
+        }
+      },
+      "layer": {
+        "app/estoque/editar/[id]/page": "action-browser"
+      },
+      "exportedName": "signOut",
+      "filename": "src/lib/actions.ts"
+    },
+    "4056f372867b6468103750f25615118e12fcdac21f": {
+      "workers": {
+        "app/estoque/editar/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/estoque/editar/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/estoque/novo/page.tsx [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "$$RSC_SERVER_ACTION_0",
+          "filename": "src/app/estoque/novo/page.tsx"
+        }
+      },
+      "layer": {
+        "app/estoque/editar/[id]/page": "rsc"
+      },
+      "exportedName": "$$RSC_SERVER_ACTION_0",
+      "filename": "src/app/estoque/novo/page.tsx"
+    }
+  },
+  "edge": {}
+}

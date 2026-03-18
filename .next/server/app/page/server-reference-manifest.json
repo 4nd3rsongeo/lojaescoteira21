@@ -1,0 +1,20 @@
+{
+  "node": {
+    "003243da54dc5e18829604f9301c3bc33feab76ecc": {
+      "workers": {
+        "app/page": {
+          "moduleId": 45739,
+          "async": true,
+          "exportedName": "signOut",
+          "filename": "src/lib/actions.ts"
+        }
+      },
+      "layer": {
+        "app/page": "action-browser"
+      },
+      "exportedName": "signOut",
+      "filename": "src/lib/actions.ts"
+    }
+  },
+  "edge": {}
+}

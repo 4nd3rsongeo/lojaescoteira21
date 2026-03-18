@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../src/app/estoque/editar/%5Bid%5D/page.tsx"],"sourcesContent":["import ProductFormPage from \"../../novo/page\";\r\n\r\nexport default ProductFormPage;\r\n"],"names":[],"mappings":"2UAAA,IAAA,EAAA,EAAA,CAAA,CAAA,6CAEe,EAAA,OAAe"}

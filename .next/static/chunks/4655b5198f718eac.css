@@ -1,0 +1,1 @@
+:root,:host{--color-nextadmin-background-default:var(--color-white);--color-dark-nextadmin-background-default:var(--color-slate-900)}body{background-color:var(--color-nextadmin-background-default)}@media (prefers-color-scheme:dark){body{background-color:var(--color-dark-nextadmin-background-default)}}

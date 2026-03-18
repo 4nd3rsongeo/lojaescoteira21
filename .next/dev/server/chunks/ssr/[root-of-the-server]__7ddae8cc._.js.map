@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 16, "column": 0}, "map": {"version":3,"sources":["file:///C:/DADOS/CODE/CTRL_LOJA/src/app/estoque/editar/%5Bid%5D/page.tsx"],"sourcesContent":["import ProductFormPage from \"../../novo/page\";\r\n\r\nexport default ProductFormPage;\r\n"],"names":[],"mappings":";;;;AAAA;;;;;;uCAEe,iJAAe"}}]
+}

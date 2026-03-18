@@ -1,0 +1,35 @@
+{
+  "node": {
+    "00bd2df43a2823f051fe30f77c823410225afadfae": {
+      "workers": {
+        "app/vendas/page": {
+          "moduleId": "[project]/.next-internal/server/app/vendas/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "signOut",
+          "filename": "src/lib/actions.ts"
+        }
+      },
+      "layer": {
+        "app/vendas/page": "action-browser"
+      },
+      "exportedName": "signOut",
+      "filename": "src/lib/actions.ts"
+    },
+    "40365999c07a908611bd015dce948b3209739db253": {
+      "workers": {
+        "app/vendas/page": {
+          "moduleId": "[project]/.next-internal/server/app/vendas/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "createSale",
+          "filename": "src/lib/actions.ts"
+        }
+      },
+      "layer": {
+        "app/vendas/page": "action-browser"
+      },
+      "exportedName": "createSale",
+      "filename": "src/lib/actions.ts"
+    }
+  },
+  "edge": {}
+}

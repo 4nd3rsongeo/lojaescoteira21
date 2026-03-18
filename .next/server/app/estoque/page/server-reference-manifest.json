@@ -1,0 +1,35 @@
+{
+  "node": {
+    "003243da54dc5e18829604f9301c3bc33feab76ecc": {
+      "workers": {
+        "app/estoque/page": {
+          "moduleId": 80414,
+          "async": true,
+          "exportedName": "signOut",
+          "filename": "src/lib/actions.ts"
+        }
+      },
+      "layer": {
+        "app/estoque/page": "action-browser"
+      },
+      "exportedName": "signOut",
+      "filename": "src/lib/actions.ts"
+    },
+    "4070ef17894401a2974a107a6abb1cbaa8a43164e5": {
+      "workers": {
+        "app/estoque/page": {
+          "moduleId": 80414,
+          "async": true,
+          "exportedName": "$$RSC_SERVER_ACTION_0",
+          "filename": "src/app/estoque/page.tsx"
+        }
+      },
+      "layer": {
+        "app/estoque/page": "rsc"
+      },
+      "exportedName": "$$RSC_SERVER_ACTION_0",
+      "filename": "src/app/estoque/page.tsx"
+    }
+  },
+  "edge": {}
+}

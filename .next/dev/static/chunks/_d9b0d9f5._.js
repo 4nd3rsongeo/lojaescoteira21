@@ -1,0 +1,1090 @@
+(globalThis.TURBOPACK || (globalThis.TURBOPACK = [])).push([typeof document === "object" ? document.currentScript : undefined,
+"[project]/src/app/login/page.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>LoginPage
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$react$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next-auth/react.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$compass$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Compass$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/compass.js [app-client] (ecmascript) <export default as Compass>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/loader-circle.js [app-client] (ecmascript) <export default as Loader2>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2d$check$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ShieldCheck$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/shield-check.js [app-client] (ecmascript) <export default as ShieldCheck>");
+;
+var _s = __turbopack_context__.k.signature();
+"use client";
+;
+;
+;
+;
+function LoginPage() {
+    _s();
+    const [email, setEmail] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
+    const [password, setPassword] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
+    const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
+    const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
+    const handleSubmit = async (e)=>{
+        e.preventDefault();
+        setError("");
+        setLoading(true);
+        try {
+            const result = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$react$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["signIn"])("credentials", {
+                email,
+                password,
+                redirect: false
+            });
+            if (result?.error) {
+                setError("Email ou senha inválidos");
+            } else {
+                router.push("/");
+                router.refresh();
+            }
+        } catch (err) {
+            setError("Ocorreu um erro inesperado");
+        } finally{
+            setLoading(false);
+        }
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "fixed inset-0 flex items-center justify-center bg-[var(--background)] p-6 sm:p-12 overflow-y-auto",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "absolute top-0 left-0 w-full h-1.5 bg-scout-blue"
+            }, void 0, false, {
+                fileName: "[project]/src/app/login/page.tsx",
+                lineNumber: 43,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "w-full max-w-lg bg-[var(--card-bg)] shadow-2xl rounded-[3rem] overflow-hidden border border-[var(--border)] flex flex-col animate-in fade-in zoom-in duration-500",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "bg-scout-green p-12 text-center text-white relative",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "absolute top-4 right-4 text-white/20",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2d$check$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ShieldCheck$3e$__["ShieldCheck"], {
+                                    className: "w-8 h-8"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/login/page.tsx",
+                                    lineNumber: 48,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/login/page.tsx",
+                                lineNumber: 47,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex justify-center mb-6",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "bg-white/10 p-4 rounded-full backdrop-blur-sm border border-white/20",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$compass$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Compass$3e$__["Compass"], {
+                                        className: "w-16 h-16 text-scout-yellow animate-spin-slow"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/login/page.tsx",
+                                        lineNumber: 52,
+                                        columnNumber: 15
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/login/page.tsx",
+                                    lineNumber: 51,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/login/page.tsx",
+                                lineNumber: 50,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                                className: "text-3xl font-black uppercase tracking-[0.2em]",
+                                children: "Lojinha Escoteira"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/login/page.tsx",
+                                lineNumber: 55,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-green-300 font-medium mt-3 italic tracking-wide",
+                                children: '"Sempre Alerta para servir"'
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/login/page.tsx",
+                                lineNumber: 56,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/app/login/page.tsx",
+                        lineNumber: 46,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
+                        onSubmit: handleSubmit,
+                        className: "p-12 space-y-8 flex-grow",
+                        children: [
+                            error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 p-4 rounded-xl border-2 border-red-200 dark:border-red-900/30 text-sm font-bold text-center flex items-center justify-center gap-2",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "w-2 h-2 bg-red-600 rounded-full animate-pulse"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/login/page.tsx",
+                                        lineNumber: 62,
+                                        columnNumber: 15
+                                    }, this),
+                                    error
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/app/login/page.tsx",
+                                lineNumber: 61,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "space-y-3",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                        className: "text-xs font-black text-scout-blue uppercase tracking-widest block pl-1",
+                                        children: "Endereço de Email"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/login/page.tsx",
+                                        lineNumber: 68,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                        type: "email",
+                                        value: email,
+                                        onChange: (e)=>setEmail(e.target.value),
+                                        required: true,
+                                        className: "w-full px-6 py-4 border-2 border-[var(--border)] bg-[var(--input-bg)] text-scout-blue rounded-2xl focus:border-scout-blue focus:ring-4 focus:ring-scout-blue/10 outline-none transition-all text-lg placeholder:text-scout-blue/30 font-bold",
+                                        placeholder: "seu-email@escoteiros.org.br"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/login/page.tsx",
+                                        lineNumber: 71,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/app/login/page.tsx",
+                                lineNumber: 67,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "space-y-3",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                        className: "text-xs font-black text-scout-blue uppercase tracking-widest block pl-1",
+                                        children: "Senha de Acesso"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/login/page.tsx",
+                                        lineNumber: 82,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                        type: "password",
+                                        value: password,
+                                        onChange: (e)=>setPassword(e.target.value),
+                                        required: true,
+                                        className: "w-full px-6 py-4 border-2 border-[var(--border)] bg-[var(--input-bg)] text-scout-blue rounded-2xl focus:border-scout-blue focus:ring-4 focus:ring-scout-blue/10 outline-none transition-all text-lg placeholder:text-scout-blue/30 font-bold",
+                                        placeholder: "••••••••"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/login/page.tsx",
+                                        lineNumber: 85,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/app/login/page.tsx",
+                                lineNumber: 81,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                type: "submit",
+                                disabled: loading,
+                                className: "w-full bg-scout-blue text-white hover:bg-[#00467a] active:scale-[0.98] transition-all py-5 rounded-2xl font-black uppercase tracking-widest text-xl shadow-lg shadow-scout-blue/20 flex justify-center items-center gap-3 mt-4 disabled:opacity-70 disabled:grayscale disabled:cursor-not-allowed",
+                                children: loading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__["Loader2"], {
+                                    className: "animate-spin"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/login/page.tsx",
+                                    lineNumber: 100,
+                                    columnNumber: 24
+                                }, this) : "Fazer Login"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/login/page.tsx",
+                                lineNumber: 95,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/app/login/page.tsx",
+                        lineNumber: 59,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "bg-[var(--background)]/50 p-6 text-center border-t border-[var(--border)]",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "text-[10px] text-[var(--muted)] uppercase font-black tracking-[0.3em]",
+                            children: "Sistema de Gestão Integrada • Grupo Escoteiro"
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/login/page.tsx",
+                            lineNumber: 105,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/login/page.tsx",
+                        lineNumber: 104,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/app/login/page.tsx",
+                lineNumber: 45,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/app/login/page.tsx",
+        lineNumber: 41,
+        columnNumber: 5
+    }, this);
+}
+_s(LoginPage, "KBB7npU3rF2XQdnzmaSwp6j38TI=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
+    ];
+});
+_c = LoginPage;
+var _c;
+__turbopack_context__.k.register(_c, "LoginPage");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/node_modules/@auth/core/errors.js [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+/**
+ * Base error class for all Auth.js errors.
+ * It's optimized to be printed in the server logs in a nicely formatted way
+ * via the [`logger.error`](https://authjs.dev/reference/core#logger) option.
+ * @noInheritDoc
+ */ __turbopack_context__.s([
+    "AccessDenied",
+    ()=>AccessDenied,
+    "AccountNotLinked",
+    ()=>AccountNotLinked,
+    "AdapterError",
+    ()=>AdapterError,
+    "AuthError",
+    ()=>AuthError,
+    "CallbackRouteError",
+    ()=>CallbackRouteError,
+    "CredentialsSignin",
+    ()=>CredentialsSignin,
+    "DuplicateConditionalUI",
+    ()=>DuplicateConditionalUI,
+    "EmailSignInError",
+    ()=>EmailSignInError,
+    "ErrorPageLoop",
+    ()=>ErrorPageLoop,
+    "EventError",
+    ()=>EventError,
+    "ExperimentalFeatureNotEnabled",
+    ()=>ExperimentalFeatureNotEnabled,
+    "InvalidCallbackUrl",
+    ()=>InvalidCallbackUrl,
+    "InvalidCheck",
+    ()=>InvalidCheck,
+    "InvalidEndpoints",
+    ()=>InvalidEndpoints,
+    "InvalidProvider",
+    ()=>InvalidProvider,
+    "JWTSessionError",
+    ()=>JWTSessionError,
+    "MissingAdapter",
+    ()=>MissingAdapter,
+    "MissingAdapterMethods",
+    ()=>MissingAdapterMethods,
+    "MissingAuthorize",
+    ()=>MissingAuthorize,
+    "MissingCSRF",
+    ()=>MissingCSRF,
+    "MissingSecret",
+    ()=>MissingSecret,
+    "MissingWebAuthnAutocomplete",
+    ()=>MissingWebAuthnAutocomplete,
+    "OAuthAccountNotLinked",
+    ()=>OAuthAccountNotLinked,
+    "OAuthCallbackError",
+    ()=>OAuthCallbackError,
+    "OAuthProfileParseError",
+    ()=>OAuthProfileParseError,
+    "OAuthSignInError",
+    ()=>OAuthSignInError,
+    "SessionTokenError",
+    ()=>SessionTokenError,
+    "SignInError",
+    ()=>SignInError,
+    "SignOutError",
+    ()=>SignOutError,
+    "UnknownAction",
+    ()=>UnknownAction,
+    "UnsupportedStrategy",
+    ()=>UnsupportedStrategy,
+    "UntrustedHost",
+    ()=>UntrustedHost,
+    "Verification",
+    ()=>Verification,
+    "WebAuthnVerificationError",
+    ()=>WebAuthnVerificationError,
+    "isClientError",
+    ()=>isClientError
+]);
+class AuthError extends Error {
+    /** @internal */ constructor(message, errorOptions){
+        if (message instanceof Error) {
+            super(undefined, {
+                cause: {
+                    err: message,
+                    ...message.cause,
+                    ...errorOptions
+                }
+            });
+        } else if (typeof message === "string") {
+            if (errorOptions instanceof Error) {
+                errorOptions = {
+                    err: errorOptions,
+                    ...errorOptions.cause
+                };
+            }
+            super(message, errorOptions);
+        } else {
+            super(undefined, message);
+        }
+        this.name = this.constructor.name;
+        // @ts-expect-error https://github.com/microsoft/TypeScript/issues/3841
+        this.type = this.constructor.type ?? "AuthError";
+        // @ts-expect-error https://github.com/microsoft/TypeScript/issues/3841
+        this.kind = this.constructor.kind ?? "error";
+        Error.captureStackTrace?.(this, this.constructor);
+        const url = `https://errors.authjs.dev#${this.type.toLowerCase()}`;
+        this.message += `${this.message ? ". " : ""}Read more at ${url}`;
+    }
+}
+class SignInError extends AuthError {
+}
+/** @internal */ SignInError.kind = "signIn";
+class AdapterError extends AuthError {
+}
+AdapterError.type = "AdapterError";
+class AccessDenied extends AuthError {
+}
+AccessDenied.type = "AccessDenied";
+class CallbackRouteError extends AuthError {
+}
+CallbackRouteError.type = "CallbackRouteError";
+class ErrorPageLoop extends AuthError {
+}
+ErrorPageLoop.type = "ErrorPageLoop";
+class EventError extends AuthError {
+}
+EventError.type = "EventError";
+class InvalidCallbackUrl extends AuthError {
+}
+InvalidCallbackUrl.type = "InvalidCallbackUrl";
+class CredentialsSignin extends SignInError {
+    constructor(){
+        super(...arguments);
+        /**
+         * The error code that is set in the `code` query parameter of the redirect URL.
+         *
+         *
+         * ⚠ NOTE: This property is going to be included in the URL, so make sure it does not hint at sensitive errors.
+         *
+         * The full error is always logged on the server, if you need to debug.
+         *
+         * Generally, we don't recommend hinting specifically if the user had either a wrong username or password specifically,
+         * try rather something like "Invalid credentials".
+         */ this.code = "credentials";
+    }
+}
+CredentialsSignin.type = "CredentialsSignin";
+class InvalidEndpoints extends AuthError {
+}
+InvalidEndpoints.type = "InvalidEndpoints";
+class InvalidCheck extends AuthError {
+}
+InvalidCheck.type = "InvalidCheck";
+class JWTSessionError extends AuthError {
+}
+JWTSessionError.type = "JWTSessionError";
+class MissingAdapter extends AuthError {
+}
+MissingAdapter.type = "MissingAdapter";
+class MissingAdapterMethods extends AuthError {
+}
+MissingAdapterMethods.type = "MissingAdapterMethods";
+class MissingAuthorize extends AuthError {
+}
+MissingAuthorize.type = "MissingAuthorize";
+class MissingSecret extends AuthError {
+}
+MissingSecret.type = "MissingSecret";
+class OAuthAccountNotLinked extends SignInError {
+}
+OAuthAccountNotLinked.type = "OAuthAccountNotLinked";
+class OAuthCallbackError extends SignInError {
+}
+OAuthCallbackError.type = "OAuthCallbackError";
+class OAuthProfileParseError extends AuthError {
+}
+OAuthProfileParseError.type = "OAuthProfileParseError";
+class SessionTokenError extends AuthError {
+}
+SessionTokenError.type = "SessionTokenError";
+class OAuthSignInError extends SignInError {
+}
+OAuthSignInError.type = "OAuthSignInError";
+class EmailSignInError extends SignInError {
+}
+EmailSignInError.type = "EmailSignInError";
+class SignOutError extends AuthError {
+}
+SignOutError.type = "SignOutError";
+class UnknownAction extends AuthError {
+}
+UnknownAction.type = "UnknownAction";
+class UnsupportedStrategy extends AuthError {
+}
+UnsupportedStrategy.type = "UnsupportedStrategy";
+class InvalidProvider extends AuthError {
+}
+InvalidProvider.type = "InvalidProvider";
+class UntrustedHost extends AuthError {
+}
+UntrustedHost.type = "UntrustedHost";
+class Verification extends AuthError {
+}
+Verification.type = "Verification";
+class MissingCSRF extends SignInError {
+}
+MissingCSRF.type = "MissingCSRF";
+const clientErrors = new Set([
+    "CredentialsSignin",
+    "OAuthAccountNotLinked",
+    "OAuthCallbackError",
+    "AccessDenied",
+    "Verification",
+    "MissingCSRF",
+    "AccountNotLinked",
+    "WebAuthnVerificationError"
+]);
+function isClientError(error) {
+    if (error instanceof AuthError) return clientErrors.has(error.type);
+    return false;
+}
+class DuplicateConditionalUI extends AuthError {
+}
+DuplicateConditionalUI.type = "DuplicateConditionalUI";
+class MissingWebAuthnAutocomplete extends AuthError {
+}
+MissingWebAuthnAutocomplete.type = "MissingWebAuthnAutocomplete";
+class WebAuthnVerificationError extends AuthError {
+}
+WebAuthnVerificationError.type = "WebAuthnVerificationError";
+class AccountNotLinked extends SignInError {
+}
+AccountNotLinked.type = "AccountNotLinked";
+class ExperimentalFeatureNotEnabled extends AuthError {
+}
+ExperimentalFeatureNotEnabled.type = "ExperimentalFeatureNotEnabled";
+}),
+"[project]/node_modules/next-auth/lib/client.js [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "ClientSessionError",
+    ()=>ClientSessionError,
+    "apiBaseUrl",
+    ()=>apiBaseUrl,
+    "fetchData",
+    ()=>fetchData,
+    "now",
+    ()=>now,
+    "parseUrl",
+    ()=>parseUrl,
+    "useOnline",
+    ()=>useOnline
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$auth$2f$core$2f$errors$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@auth/core/errors.js [app-client] (ecmascript)");
+"use client";
+;
+;
+/** @todo */ class ClientFetchError extends __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$auth$2f$core$2f$errors$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AuthError"] {
+}
+class ClientSessionError extends __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$auth$2f$core$2f$errors$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AuthError"] {
+}
+async function fetchData(path, __NEXTAUTH, logger, req = {}) {
+    const url = `${apiBaseUrl(__NEXTAUTH)}/${path}`;
+    try {
+        const options = {
+            headers: {
+                "Content-Type": "application/json",
+                ...req?.headers?.cookie ? {
+                    cookie: req.headers.cookie
+                } : {}
+            }
+        };
+        if (req?.body) {
+            options.body = JSON.stringify(req.body);
+            options.method = "POST";
+        }
+        const res = await fetch(url, options);
+        const data = await res.json();
+        if (!res.ok) throw data;
+        return data;
+    } catch (error) {
+        logger.error(new ClientFetchError(error.message, error));
+        return null;
+    }
+}
+function apiBaseUrl(__NEXTAUTH) {
+    if (typeof window === "undefined") {
+        // Return absolute path when called server side
+        return `${__NEXTAUTH.baseUrlServer}${__NEXTAUTH.basePathServer}`;
+    }
+    // Return relative path when called client side
+    return __NEXTAUTH.basePath;
+}
+function useOnline() {
+    const [isOnline, setIsOnline] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"](typeof navigator !== "undefined" ? navigator.onLine : false);
+    const setOnline = ()=>setIsOnline(true);
+    const setOffline = ()=>setIsOnline(false);
+    __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"]({
+        "useOnline.useEffect": ()=>{
+            window.addEventListener("online", setOnline);
+            window.addEventListener("offline", setOffline);
+            return ({
+                "useOnline.useEffect": ()=>{
+                    window.removeEventListener("online", setOnline);
+                    window.removeEventListener("offline", setOffline);
+                }
+            })["useOnline.useEffect"];
+        }
+    }["useOnline.useEffect"], []);
+    return isOnline;
+}
+function now() {
+    return Math.floor(Date.now() / 1000);
+}
+function parseUrl(url) {
+    const defaultUrl = new URL("http://localhost:3000/api/auth");
+    if (url && !url.startsWith("http")) {
+        url = `https://${url}`;
+    }
+    const _url = new URL(url || defaultUrl);
+    const path = (_url.pathname === "/" ? defaultUrl.pathname : _url.pathname)// Remove trailing slash
+    .replace(/\/$/, "");
+    const base = `${_url.origin}${path}`;
+    return {
+        origin: _url.origin,
+        host: _url.host,
+        path,
+        base,
+        toString: ()=>base
+    };
+}
+}),
+"[project]/node_modules/next-auth/react.js [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "SessionContext",
+    ()=>SessionContext,
+    "SessionProvider",
+    ()=>SessionProvider,
+    "__NEXTAUTH",
+    ()=>__NEXTAUTH,
+    "getCsrfToken",
+    ()=>getCsrfToken,
+    "getProviders",
+    ()=>getProviders,
+    "getSession",
+    ()=>getSession,
+    "signIn",
+    ()=>signIn,
+    "signOut",
+    ()=>signOut,
+    "useSession",
+    ()=>useSession
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$lib$2f$client$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next-auth/lib/client.js [app-client] (ecmascript)");
+/**
+ *
+ * NextAuth.js is the official integration of Auth.js for Next.js applications. It supports both
+ * [Client Components](https://nextjs.org/docs/app/building-your-application/rendering/client-components) and the
+ * [Pages Router](https://nextjs.org/docs/pages). It includes methods for signing in, signing out, hooks, and a React
+ * Context provider to wrap your application and make session data available anywhere.
+ *
+ * For use in [Server Actions](https://nextjs.org/docs/app/api-reference/functions/server-actions), check out [these methods](https://authjs.dev/guides/upgrade-to-v5#methods)
+ *
+ * @module react
+ */ "use client";
+;
+;
+;
+const __NEXTAUTH = {
+    baseUrl: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$lib$2f$client$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["parseUrl"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.NEXTAUTH_URL ?? __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.VERCEL_URL).origin,
+    basePath: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$lib$2f$client$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["parseUrl"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.NEXTAUTH_URL).path,
+    baseUrlServer: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$lib$2f$client$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["parseUrl"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.NEXTAUTH_URL_INTERNAL ?? __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.NEXTAUTH_URL ?? __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.VERCEL_URL).origin,
+    basePathServer: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$lib$2f$client$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["parseUrl"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.NEXTAUTH_URL_INTERNAL ?? __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.NEXTAUTH_URL).path,
+    _lastSync: 0,
+    _session: undefined,
+    _getSession: ()=>{}
+};
+// https://github.com/nextauthjs/next-auth/pull/10762
+let broadcastChannel = null;
+function getNewBroadcastChannel() {
+    if (typeof BroadcastChannel === "undefined") {
+        return {
+            postMessage: ()=>{},
+            addEventListener: ()=>{},
+            removeEventListener: ()=>{},
+            name: "next-auth",
+            onmessage: null,
+            onmessageerror: null,
+            close: ()=>{},
+            dispatchEvent: ()=>false
+        };
+    }
+    return new BroadcastChannel("next-auth");
+}
+function broadcast() {
+    if (broadcastChannel === null) {
+        broadcastChannel = getNewBroadcastChannel();
+    }
+    return broadcastChannel;
+}
+// TODO:
+const logger = {
+    debug: console.debug,
+    error: console.error,
+    warn: console.warn
+};
+const SessionContext = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createContext"]?.(undefined);
+function useSession(options) {
+    if (!SessionContext) {
+        throw new Error("React Context is unavailable in Server Components");
+    }
+    // @ts-expect-error Satisfy TS if branch on line below
+    const value = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useContext"](SessionContext);
+    if (!value && ("TURBOPACK compile-time value", "development") !== "production") {
+        throw new Error("[next-auth]: `useSession` must be wrapped in a <SessionProvider />");
+    }
+    const { required, onUnauthenticated } = options ?? {};
+    const requiredAndNotLoading = required && value.status === "unauthenticated";
+    __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"]({
+        "useSession.useEffect": ()=>{
+            if (requiredAndNotLoading) {
+                const url = `${__NEXTAUTH.basePath}/signin?${new URLSearchParams({
+                    error: "SessionRequired",
+                    callbackUrl: window.location.href
+                })}`;
+                if (onUnauthenticated) onUnauthenticated();
+                else window.location.href = url;
+            }
+        }
+    }["useSession.useEffect"], [
+        requiredAndNotLoading,
+        onUnauthenticated
+    ]);
+    if (requiredAndNotLoading) {
+        return {
+            data: value.data,
+            update: value.update,
+            status: "loading"
+        };
+    }
+    return value;
+}
+async function getSession(params) {
+    const session = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$lib$2f$client$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["fetchData"])("session", __NEXTAUTH, logger, params);
+    if (params?.broadcast ?? true) {
+        // https://github.com/nextauthjs/next-auth/pull/11470
+        getNewBroadcastChannel().postMessage({
+            event: "session",
+            data: {
+                trigger: "getSession"
+            }
+        });
+    }
+    return session;
+}
+async function getCsrfToken() {
+    const response = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$lib$2f$client$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["fetchData"])("csrf", __NEXTAUTH, logger);
+    return response?.csrfToken ?? "";
+}
+async function getProviders() {
+    return (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$lib$2f$client$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["fetchData"])("providers", __NEXTAUTH, logger);
+}
+async function signIn(provider, options, authorizationParams) {
+    const { callbackUrl, ...rest } = options ?? {};
+    const { redirect = true, redirectTo = callbackUrl ?? window.location.href, ...signInParams } = rest;
+    const baseUrl = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$lib$2f$client$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiBaseUrl"])(__NEXTAUTH);
+    const providers = await getProviders();
+    if (!providers) {
+        const url = `${baseUrl}/error`;
+        window.location.href = url;
+        return; // TODO: Return error if `redirect: false`
+    }
+    if (!provider || !providers[provider]) {
+        const url = `${baseUrl}/signin?${new URLSearchParams({
+            callbackUrl: redirectTo
+        })}`;
+        window.location.href = url;
+        return; // TODO: Return error if `redirect: false`
+    }
+    const providerType = providers[provider].type;
+    if (providerType === "webauthn") {
+        // TODO: Add docs link with explanation
+        throw new TypeError([
+            `Provider id "${provider}" refers to a WebAuthn provider.`,
+            'Please use `import { signIn } from "next-auth/webauthn"` instead.'
+        ].join("\n"));
+    }
+    const signInUrl = `${baseUrl}/${providerType === "credentials" ? "callback" : "signin"}/${provider}`;
+    const csrfToken = await getCsrfToken();
+    const res = await fetch(`${signInUrl}?${new URLSearchParams(authorizationParams)}`, {
+        method: "post",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+            "X-Auth-Return-Redirect": "1"
+        },
+        body: new URLSearchParams({
+            ...signInParams,
+            csrfToken,
+            callbackUrl: redirectTo
+        })
+    });
+    const data = await res.json();
+    if (redirect) {
+        const url = data.url ?? redirectTo;
+        window.location.href = url;
+        // If url contains a hash, the browser does not reload the page. We reload manually
+        if (url.includes("#")) window.location.reload();
+        return;
+    }
+    const error = new URL(data.url).searchParams.get("error") ?? undefined;
+    const code = new URL(data.url).searchParams.get("code") ?? undefined;
+    if (res.ok) {
+        await __NEXTAUTH._getSession({
+            event: "storage"
+        });
+    }
+    return {
+        error,
+        code,
+        status: res.status,
+        ok: res.ok,
+        url: error ? null : data.url
+    };
+}
+async function signOut(options) {
+    const { redirect = true, redirectTo = options?.callbackUrl ?? window.location.href } = options ?? {};
+    const baseUrl = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$lib$2f$client$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiBaseUrl"])(__NEXTAUTH);
+    const csrfToken = await getCsrfToken();
+    const res = await fetch(`${baseUrl}/signout`, {
+        method: "post",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+            "X-Auth-Return-Redirect": "1"
+        },
+        body: new URLSearchParams({
+            csrfToken,
+            callbackUrl: redirectTo
+        })
+    });
+    const data = await res.json();
+    broadcast().postMessage({
+        event: "session",
+        data: {
+            trigger: "signout"
+        }
+    });
+    if (redirect) {
+        const url = data.url ?? redirectTo;
+        window.location.href = url;
+        // If url contains a hash, the browser does not reload the page. We reload manually
+        if (url.includes("#")) window.location.reload();
+        return;
+    }
+    await __NEXTAUTH._getSession({
+        event: "storage"
+    });
+    return data;
+}
+function SessionProvider(props) {
+    if (!SessionContext) {
+        throw new Error("React Context is unavailable in Server Components");
+    }
+    const { children, basePath, refetchInterval, refetchWhenOffline } = props;
+    if (basePath) __NEXTAUTH.basePath = basePath;
+    /**
+     * If session was `null`, there was an attempt to fetch it,
+     * but it failed, but we still treat it as a valid initial value.
+     */ const hasInitialSession = props.session !== undefined;
+    /** If session was passed, initialize as already synced */ __NEXTAUTH._lastSync = hasInitialSession ? (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$lib$2f$client$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["now"])() : 0;
+    const [session, setSession] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"]({
+        "SessionProvider.useState": ()=>{
+            if (hasInitialSession) __NEXTAUTH._session = props.session;
+            return props.session;
+        }
+    }["SessionProvider.useState"]);
+    /** If session was passed, initialize as not loading */ const [loading, setLoading] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"](!hasInitialSession);
+    __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"]({
+        "SessionProvider.useEffect": ()=>{
+            __NEXTAUTH._getSession = ({
+                "SessionProvider.useEffect": async ({ event } = {})=>{
+                    try {
+                        const storageEvent = event === "storage";
+                        // We should always update if we don't have a client session yet
+                        // or if there are events from other tabs/windows
+                        if (storageEvent || __NEXTAUTH._session === undefined) {
+                            __NEXTAUTH._lastSync = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$lib$2f$client$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["now"])();
+                            __NEXTAUTH._session = await getSession({
+                                broadcast: !storageEvent
+                            });
+                            setSession(__NEXTAUTH._session);
+                            return;
+                        }
+                        if (// If there is no time defined for when a session should be considered
+                        // stale, then it's okay to use the value we have until an event is
+                        // triggered which updates it
+                        !event || // If the client doesn't have a session then we don't need to call
+                        // the server to check if it does (if they have signed in via another
+                        // tab or window that will come through as a "stroage" event
+                        // event anyway)
+                        __NEXTAUTH._session === null || // Bail out early if the client session is not stale yet
+                        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$lib$2f$client$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["now"])() < __NEXTAUTH._lastSync) {
+                            return;
+                        }
+                        // An event or session staleness occurred, update the client session.
+                        __NEXTAUTH._lastSync = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$lib$2f$client$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["now"])();
+                        __NEXTAUTH._session = await getSession();
+                        setSession(__NEXTAUTH._session);
+                    } catch (error) {
+                        logger.error(new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$lib$2f$client$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ClientSessionError"](error.message, error));
+                    } finally{
+                        setLoading(false);
+                    }
+                }
+            })["SessionProvider.useEffect"];
+            __NEXTAUTH._getSession();
+            return ({
+                "SessionProvider.useEffect": ()=>{
+                    __NEXTAUTH._lastSync = 0;
+                    __NEXTAUTH._session = undefined;
+                    __NEXTAUTH._getSession = ({
+                        "SessionProvider.useEffect": ()=>{}
+                    })["SessionProvider.useEffect"];
+                }
+            })["SessionProvider.useEffect"];
+        }
+    }["SessionProvider.useEffect"], []);
+    __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"]({
+        "SessionProvider.useEffect": ()=>{
+            const handle = {
+                "SessionProvider.useEffect.handle": ()=>__NEXTAUTH._getSession({
+                        event: "storage"
+                    })
+            }["SessionProvider.useEffect.handle"];
+            // Listen for storage events and update session if event fired from
+            // another window (but suppress firing another event to avoid a loop)
+            // Fetch new session data but tell it to not to fire another event to
+            // avoid an infinite loop.
+            // Note: We could pass session data through and do something like
+            // `setData(message.data)` but that can cause problems depending
+            // on how the session object is being used in the client; it is
+            // more robust to have each window/tab fetch it's own copy of the
+            // session object rather than share it across instances.
+            broadcast().addEventListener("message", handle);
+            return ({
+                "SessionProvider.useEffect": ()=>broadcast().removeEventListener("message", handle)
+            })["SessionProvider.useEffect"];
+        }
+    }["SessionProvider.useEffect"], []);
+    __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"]({
+        "SessionProvider.useEffect": ()=>{
+            const { refetchOnWindowFocus = true } = props;
+            // Listen for when the page is visible, if the user switches tabs
+            // and makes our tab visible again, re-fetch the session, but only if
+            // this feature is not disabled.
+            const visibilityHandler = {
+                "SessionProvider.useEffect.visibilityHandler": ()=>{
+                    if (refetchOnWindowFocus && document.visibilityState === "visible") __NEXTAUTH._getSession({
+                        event: "visibilitychange"
+                    });
+                }
+            }["SessionProvider.useEffect.visibilityHandler"];
+            document.addEventListener("visibilitychange", visibilityHandler, false);
+            return ({
+                "SessionProvider.useEffect": ()=>document.removeEventListener("visibilitychange", visibilityHandler, false)
+            })["SessionProvider.useEffect"];
+        }
+    }["SessionProvider.useEffect"], [
+        props.refetchOnWindowFocus
+    ]);
+    const isOnline = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$lib$2f$client$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useOnline"])();
+    // TODO: Flip this behavior in next major version
+    const shouldRefetch = refetchWhenOffline !== false || isOnline;
+    __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"]({
+        "SessionProvider.useEffect": ()=>{
+            if (refetchInterval && shouldRefetch) {
+                const refetchIntervalTimer = setInterval({
+                    "SessionProvider.useEffect.refetchIntervalTimer": ()=>{
+                        if (__NEXTAUTH._session) {
+                            __NEXTAUTH._getSession({
+                                event: "poll"
+                            });
+                        }
+                    }
+                }["SessionProvider.useEffect.refetchIntervalTimer"], refetchInterval * 1000);
+                return ({
+                    "SessionProvider.useEffect": ()=>clearInterval(refetchIntervalTimer)
+                })["SessionProvider.useEffect"];
+            }
+        }
+    }["SessionProvider.useEffect"], [
+        refetchInterval,
+        shouldRefetch
+    ]);
+    const value = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"]({
+        "SessionProvider.useMemo[value]": ()=>({
+                data: session,
+                status: loading ? "loading" : session ? "authenticated" : "unauthenticated",
+                async update (data) {
+                    if (loading) return;
+                    setLoading(true);
+                    const newSession = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$lib$2f$client$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["fetchData"])("session", __NEXTAUTH, logger, typeof data === "undefined" ? undefined : {
+                        body: {
+                            csrfToken: await getCsrfToken(),
+                            data
+                        }
+                    });
+                    setLoading(false);
+                    if (newSession) {
+                        setSession(newSession);
+                        broadcast().postMessage({
+                            event: "session",
+                            data: {
+                                trigger: "getSession"
+                            }
+                        });
+                    }
+                    return newSession;
+                }
+            })
+    }["SessionProvider.useMemo[value]"], [
+        session,
+        loading
+    ]);
+    return(// @ts-expect-error
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsx"])(SessionContext.Provider, {
+        value: value,
+        children: children
+    }));
+}
+}),
+"[project]/node_modules/lucide-react/dist/esm/icons/loader-circle.js [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "__iconNode",
+    ()=>__iconNode,
+    "default",
+    ()=>LoaderCircle
+]);
+/**
+ * @license lucide-react v0.577.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$createLucideIcon$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/createLucideIcon.js [app-client] (ecmascript)");
+;
+const __iconNode = [
+    [
+        "path",
+        {
+            d: "M21 12a9 9 0 1 1-6.219-8.56",
+            key: "13zald"
+        }
+    ]
+];
+const LoaderCircle = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$createLucideIcon$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("loader-circle", __iconNode);
+;
+ //# sourceMappingURL=loader-circle.js.map
+}),
+"[project]/node_modules/lucide-react/dist/esm/icons/loader-circle.js [app-client] (ecmascript) <export default as Loader2>", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "Loader2",
+    ()=>__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"]
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/loader-circle.js [app-client] (ecmascript)");
+}),
+"[project]/node_modules/lucide-react/dist/esm/icons/shield-check.js [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "__iconNode",
+    ()=>__iconNode,
+    "default",
+    ()=>ShieldCheck
+]);
+/**
+ * @license lucide-react v0.577.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$createLucideIcon$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/createLucideIcon.js [app-client] (ecmascript)");
+;
+const __iconNode = [
+    [
+        "path",
+        {
+            d: "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z",
+            key: "oel41y"
+        }
+    ],
+    [
+        "path",
+        {
+            d: "m9 12 2 2 4-4",
+            key: "dzmm74"
+        }
+    ]
+];
+const ShieldCheck = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$createLucideIcon$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("shield-check", __iconNode);
+;
+ //# sourceMappingURL=shield-check.js.map
+}),
+"[project]/node_modules/lucide-react/dist/esm/icons/shield-check.js [app-client] (ecmascript) <export default as ShieldCheck>", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "ShieldCheck",
+    ()=>__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2d$check$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"]
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2d$check$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/shield-check.js [app-client] (ecmascript)");
+}),
+]);
+
+//# sourceMappingURL=_d9b0d9f5._.js.map

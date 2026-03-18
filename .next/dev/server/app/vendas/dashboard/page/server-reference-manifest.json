@@ -1,0 +1,35 @@
+{
+  "node": {
+    "00bd2df43a2823f051fe30f77c823410225afadfae": {
+      "workers": {
+        "app/vendas/dashboard/page": {
+          "moduleId": "[project]/.next-internal/server/app/vendas/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "signOut",
+          "filename": "src/lib/actions.ts"
+        }
+      },
+      "layer": {
+        "app/vendas/dashboard/page": "action-browser"
+      },
+      "exportedName": "signOut",
+      "filename": "src/lib/actions.ts"
+    },
+    "40c7392b4a93411210db42e967bf4faf6a5208f3e8": {
+      "workers": {
+        "app/vendas/dashboard/page": {
+          "moduleId": "[project]/.next-internal/server/app/vendas/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "undoSale",
+          "filename": "src/lib/actions.ts"
+        }
+      },
+      "layer": {
+        "app/vendas/dashboard/page": "action-browser"
+      },
+      "exportedName": "undoSale",
+      "filename": "src/lib/actions.ts"
+    }
+  },
+  "edge": {}
+}

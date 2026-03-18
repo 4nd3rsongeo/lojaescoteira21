@@ -1,0 +1,87 @@
+{
+  "node": {
+    "00bd2df43a2823f051fe30f77c823410225afadfae": {
+      "workers": {
+        "app/estoque/page": {
+          "moduleId": "[project]/.next-internal/server/app/estoque/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/estoque/page.tsx [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "signOut",
+          "filename": "src/lib/actions.ts"
+        },
+        "app/page": {
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "signOut",
+          "filename": "src/lib/actions.ts"
+        },
+        "app/vendas/dashboard/page": {
+          "moduleId": "[project]/.next-internal/server/app/vendas/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "signOut",
+          "filename": "src/lib/actions.ts"
+        },
+        "app/vendas/page": {
+          "moduleId": "[project]/.next-internal/server/app/vendas/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "signOut",
+          "filename": "src/lib/actions.ts"
+        }
+      },
+      "layer": {
+        "app/estoque/page": "action-browser",
+        "app/page": "action-browser",
+        "app/vendas/dashboard/page": "action-browser",
+        "app/vendas/page": "action-browser"
+      },
+      "filename": "src/lib/actions.ts",
+      "exportedName": "signOut"
+    },
+    "405ac4f24f35429c3d229840239f24813818cd0101": {
+      "workers": {
+        "app/estoque/page": {
+          "moduleId": "[project]/.next-internal/server/app/estoque/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/estoque/page.tsx [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "$$RSC_SERVER_ACTION_0",
+          "filename": "src/app/estoque/page.tsx"
+        }
+      },
+      "layer": {
+        "app/estoque/page": "rsc"
+      },
+      "filename": "src/app/estoque/page.tsx",
+      "exportedName": "$$RSC_SERVER_ACTION_0"
+    },
+    "40365999c07a908611bd015dce948b3209739db253": {
+      "workers": {
+        "app/vendas/page": {
+          "moduleId": "[project]/.next-internal/server/app/vendas/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "createSale",
+          "filename": "src/lib/actions.ts"
+        }
+      },
+      "layer": {
+        "app/vendas/page": "action-browser"
+      },
+      "filename": "src/lib/actions.ts",
+      "exportedName": "createSale"
+    },
+    "40c7392b4a93411210db42e967bf4faf6a5208f3e8": {
+      "workers": {
+        "app/vendas/dashboard/page": {
+          "moduleId": "[project]/.next-internal/server/app/vendas/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": true,
+          "exportedName": "undoSale",
+          "filename": "src/lib/actions.ts"
+        }
+      },
+      "layer": {
+        "app/vendas/dashboard/page": "action-browser"
+      },
+      "filename": "src/lib/actions.ts",
+      "exportedName": "undoSale"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "bfVs/MdswElI+4B0/2zyAZxh8+MqWwb8NevD+vz5lEg="
+}

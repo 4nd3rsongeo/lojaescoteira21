@@ -1,0 +1,35 @@
+{
+  "node": {
+    "003243da54dc5e18829604f9301c3bc33feab76ecc": {
+      "workers": {
+        "app/vendas/dashboard/page": {
+          "moduleId": 16436,
+          "async": true,
+          "exportedName": "signOut",
+          "filename": "src/lib/actions.ts"
+        }
+      },
+      "layer": {
+        "app/vendas/dashboard/page": "action-browser"
+      },
+      "exportedName": "signOut",
+      "filename": "src/lib/actions.ts"
+    },
+    "4007fda6c2c914858e3fac142acc34a0d7ec300f89": {
+      "workers": {
+        "app/vendas/dashboard/page": {
+          "moduleId": 16436,
+          "async": true,
+          "exportedName": "undoSale",
+          "filename": "src/lib/actions.ts"
+        }
+      },
+      "layer": {
+        "app/vendas/dashboard/page": "action-browser"
+      },
+      "exportedName": "undoSale",
+      "filename": "src/lib/actions.ts"
+    }
+  },
+  "edge": {}
+}

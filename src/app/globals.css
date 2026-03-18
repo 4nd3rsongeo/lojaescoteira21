@@ -1,0 +1,192 @@
+@import "tailwindcss";
+
+:root {
+  --scout-green: #006b3f;
+  --scout-blue: #005a9c;
+  --scout-yellow: #ffcc00;
+  --scout-white: #ffffff;
+  --scout-khaki: #f4f1ea;
+  --background: var(--scout-khaki);
+  --foreground: #1a1a1a;
+  --card-bg: #ffffff;
+  --input-bg: #ffffff;
+  --muted: #64748b;
+  --border: #e2e8f0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0f1d;
+    --foreground: #f1f5f9;
+    --scout-khaki: #161e2e;
+    --card-bg: #1e293b;
+    --input-bg: #0f172a;
+    --muted: #94a3b8;
+    --border: #334155;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@theme {
+  --color-scout-green: var(--scout-green);
+  --color-scout-blue: var(--scout-blue);
+  --color-scout-yellow: var(--scout-yellow);
+  --color-scout-khaki: var(--scout-khaki);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card-bg);
+  --color-border: var(--border);
+  --animate-spin-slow: spin 8s linear infinite;
+}
+
+@layer components {
+  .btn-scout-primary {
+    @apply bg-scout-green text-white hover:bg-[#005230] transition-all px-6 py-2.5 rounded-full font-bold uppercase tracking-wider text-sm shadow-sm hover:shadow-md flex items-center gap-2 cursor-pointer active:scale-95 disabled:opacity-50;
+  }
+  
+  .btn-scout-secondary {
+    @apply bg-scout-blue text-white hover:bg-[#00467a] transition-all px-6 py-2.5 rounded-full font-bold uppercase tracking-wider text-sm shadow-sm hover:shadow-md flex items-center gap-2 cursor-pointer active:scale-95;
+  }
+  
+  .card-scout {
+    @apply bg-[var(--card-bg)] border border-[var(--border)] shadow-sm rounded-xl p-6 transition-all hover:shadow-md;
+  }
+  
+  .input-scout {
+    @apply border-2 border-[var(--border)] rounded-xl px-4 py-3 focus:border-scout-green focus:ring-4 focus:ring-scout-green/10 outline-none transition-all bg-[var(--input-bg)] text-[var(--foreground)] placeholder:text-gray-400;
+  }
+
+  .nav-link-scout {
+    @apply text-white/80 hover:text-scout-yellow transition-all flex flex-col items-center gap-1 text-[10px] uppercase font-black tracking-widest py-2 px-3 rounded-lg hover:bg-white/10;
+  }
+
+  .nav-link-active {
+    @apply text-scout-yellow bg-white/10;
+  }
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-scout-green/10 rounded-full hover:bg-scout-green/20 transition-colors;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-scout-green/20 rounded-full hover:bg-scout-green/40;
+}
+
+/* Admin Fixes & Elite Look */
+.next-admin {
+  --admin-primary: var(--scout-green);
+  --admin-secondary: var(--scout-blue);
+}
+
+/* Highlight Add Button */
+.next-admin a[href$="/new"],
+.next-admin button:has(svg[class*="plus"]) {
+  background-color: var(--scout-green) !important;
+  color: white !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 107, 63, 0.3) !important;
+  border: 2px solid rgba(255, 255, 255, 0.4) !important;
+  transition: all 0.3s ease !important;
+}
+
+.next-admin a[href$="/new"]:hover,
+.next-admin button:has(svg[class*="plus"]):hover {
+  background-color: #005230 !important;
+  border-color: white !important;
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0 15px 20px -5px rgba(0, 107, 63, 0.4) !important;
+}
+
+/* Highlight Delete/Remove Actions */
+.next-admin button:has(svg[class*="trash"]),
+.next-admin button[class*="delete"],
+.next-admin button[class*="remove"],
+.next-admin .text-red-600 {
+  background-color: #ef4444 !important;
+  color: white !important;
+  padding: 0.6rem !important;
+  border-radius: 0.75rem !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.next-admin button:has(svg[class*="trash"]):hover,
+.next-admin button[class*="delete"]:hover,
+.next-admin button[class*="remove"]:hover {
+  background-color: #dc2626 !important;
+  border-color: white !important;
+  transform: scale(1.1) !important;
+  box-shadow: 0 8px 15px -3px rgba(239, 68, 68, 0.4) !important;
+}
+
+.next-admin th span[aria-live="polite"],
+.next-admin th .sr-only,
+.next-admin th span.sr-only {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+  word-wrap: normal !important;
+}
+
+/* Custom transitions for admin rows */
+.next-admin tr {
+  transition-property: all;
+  transition-duration: 200ms;
+}
+
+.next-admin tr:hover {
+  background-color: rgba(0, 107, 63, 0.05);
+}
+
+/* Better buttons in admin */
+.next-admin button {
+  transition-property: transform;
+}
+
+.next-admin button:active {
+  transform: scale(0.95);
+}
+
+/* Sidebar branding fix */
+.next-admin aside {
+  border-right-width: 1px !important;
+  border-color: var(--border) !important;
+}
+
+/* Animations */
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.4; transform: scale(1.05); }
+  50% { opacity: 0.6; transform: scale(1.1); }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 12s ease-in-out infinite;
+}

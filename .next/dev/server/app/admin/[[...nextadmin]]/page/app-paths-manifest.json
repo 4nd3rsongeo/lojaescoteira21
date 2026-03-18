@@ -1,0 +1,3 @@
+{
+  "/admin/[[...nextadmin]]/page": "app/admin/[[...nextadmin]]/page.js"
+}

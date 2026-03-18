@@ -1,0 +1,6 @@
+node_modules
+# Keep environment variables out of version control
+.env
+dev_pathway.txt
+escopo.txt
+/generated/prisma

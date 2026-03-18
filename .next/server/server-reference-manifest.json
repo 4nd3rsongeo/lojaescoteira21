@@ -1,0 +1,144 @@
+{
+  "node": {
+    "003243da54dc5e18829604f9301c3bc33feab76ecc": {
+      "workers": {
+        "app/_not-found/page": {
+          "moduleId": 9307,
+          "async": true,
+          "exportedName": "signOut",
+          "filename": "src/lib/actions.ts"
+        },
+        "app/admin/[[...nextadmin]]/page": {
+          "moduleId": 60566,
+          "async": true,
+          "exportedName": "signOut",
+          "filename": "src/lib/actions.ts"
+        },
+        "app/estoque/editar/[id]/page": {
+          "moduleId": 6387,
+          "async": true,
+          "exportedName": "signOut",
+          "filename": "src/lib/actions.ts"
+        },
+        "app/estoque/novo/page": {
+          "moduleId": 51043,
+          "async": true,
+          "exportedName": "signOut",
+          "filename": "src/lib/actions.ts"
+        },
+        "app/estoque/page": {
+          "moduleId": 80414,
+          "async": true,
+          "exportedName": "signOut",
+          "filename": "src/lib/actions.ts"
+        },
+        "app/login/page": {
+          "moduleId": 29253,
+          "async": true,
+          "exportedName": "signOut",
+          "filename": "src/lib/actions.ts"
+        },
+        "app/page": {
+          "moduleId": 45739,
+          "async": true,
+          "exportedName": "signOut",
+          "filename": "src/lib/actions.ts"
+        },
+        "app/vendas/dashboard/page": {
+          "moduleId": 16436,
+          "async": true,
+          "exportedName": "signOut",
+          "filename": "src/lib/actions.ts"
+        },
+        "app/vendas/page": {
+          "moduleId": 16663,
+          "async": true,
+          "exportedName": "signOut",
+          "filename": "src/lib/actions.ts"
+        }
+      },
+      "layer": {
+        "app/_not-found/page": "action-browser",
+        "app/admin/[[...nextadmin]]/page": "action-browser",
+        "app/estoque/editar/[id]/page": "action-browser",
+        "app/estoque/novo/page": "action-browser",
+        "app/estoque/page": "action-browser",
+        "app/login/page": "action-browser",
+        "app/page": "action-browser",
+        "app/vendas/dashboard/page": "action-browser",
+        "app/vendas/page": "action-browser"
+      },
+      "filename": "src/lib/actions.ts",
+      "exportedName": "signOut"
+    },
+    "4070ef17894401a2974a107a6abb1cbaa8a43164e5": {
+      "workers": {
+        "app/estoque/page": {
+          "moduleId": 80414,
+          "async": true,
+          "exportedName": "$$RSC_SERVER_ACTION_0",
+          "filename": "src/app/estoque/page.tsx"
+        }
+      },
+      "layer": {
+        "app/estoque/page": "rsc"
+      },
+      "filename": "src/app/estoque/page.tsx",
+      "exportedName": "$$RSC_SERVER_ACTION_0"
+    },
+    "403e689ba9362357b05db14265b6c4cbed08fa2de5": {
+      "workers": {
+        "app/estoque/editar/[id]/page": {
+          "moduleId": 6387,
+          "async": true,
+          "exportedName": "$$RSC_SERVER_ACTION_0",
+          "filename": "src/app/estoque/novo/page.tsx"
+        },
+        "app/estoque/novo/page": {
+          "moduleId": 51043,
+          "async": true,
+          "exportedName": "$$RSC_SERVER_ACTION_0",
+          "filename": "src/app/estoque/novo/page.tsx"
+        }
+      },
+      "layer": {
+        "app/estoque/editar/[id]/page": "rsc",
+        "app/estoque/novo/page": "rsc"
+      },
+      "filename": "src/app/estoque/novo/page.tsx",
+      "exportedName": "$$RSC_SERVER_ACTION_0"
+    },
+    "406b37ecba2a13a2634981dc811fbd88bf1354f353": {
+      "workers": {
+        "app/vendas/page": {
+          "moduleId": 16663,
+          "async": true,
+          "exportedName": "createSale",
+          "filename": "src/lib/actions.ts"
+        }
+      },
+      "layer": {
+        "app/vendas/page": "action-browser"
+      },
+      "filename": "src/lib/actions.ts",
+      "exportedName": "createSale"
+    },
+    "4007fda6c2c914858e3fac142acc34a0d7ec300f89": {
+      "workers": {
+        "app/vendas/dashboard/page": {
+          "moduleId": 16436,
+          "async": true,
+          "exportedName": "undoSale",
+          "filename": "src/lib/actions.ts"
+        }
+      },
+      "layer": {
+        "app/vendas/dashboard/page": "action-browser"
+      },
+      "filename": "src/lib/actions.ts",
+      "exportedName": "undoSale"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "JRKgiP/fvLVu+ZVFPgxBX68duw2xlqbgdPOYuiTTg+U="
+}
