@@ -80,7 +80,7 @@ export default async function DashboardPage() {
             </h1>
             
             <p className="text-white/80 text-lg md:text-xl font-medium max-w-xl animate-in slide-in-from-left-16 duration-1000 delay-200">
-              Gerencie uniformes, distintivos e equipamentos com a precisão e a disciplina que o movimento escoteiro exige.
+              Todos os itens do grupo de forma organizada e disponíveis sem complicação.
             </p>
             
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start animate-in slide-in-from-left-20 duration-1000 delay-300">
