@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
-    "build": "prisma generate && next build",
+    "build": "node scripts/fix-prisma-runtime.js && prisma generate && next build",
     "start": "next start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
