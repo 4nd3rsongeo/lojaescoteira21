@@ -2,6 +2,11 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   serverExternalPackages: ["@prisma/client", "prisma"],
+  webpack: (config) => {
+    config.externals.push("@prisma/client");
+    return config;
+  },
+  turbopack: {},
   images: {
     remotePatterns: [
       {
