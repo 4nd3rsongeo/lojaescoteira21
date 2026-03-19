@@ -19,8 +19,8 @@ export const authConfig = {
 
       if (isOnLogin) {
         if (isLoggedIn) {
-          // Redirecionamento relativo puro
-          return Response.redirect(new URL("/", nextUrl.url));
+          // Redirecionamento relativo usando o objeto nextUrl
+          return Response.redirect(new URL("/", nextUrl));
         }
         return true;
       }
