@@ -10,23 +10,22 @@ export const authConfig = {
       const isOnAdmin = nextUrl.pathname.startsWith("/admin");
       const isOnLogin = nextUrl.pathname === "/login";
 
-      // Permitir sempre as APIs de auth
       if (nextUrl.pathname.startsWith("/api/auth")) return true;
 
       if (isOnAdmin) {
         if (isLoggedIn && auth?.user?.role === "ADMIN") return true;
-        return false; // Redireciona para login se não for admin
+        return false; 
       }
 
       if (isOnLogin) {
         if (isLoggedIn) {
-          const baseUrl = nextUrl.origin;
-          return Response.redirect(new URL("/", baseUrl));
+          // Redirecionamento relativo puro
+          return Response.redirect(new URL("/", nextUrl.url));
         }
         return true;
       }
 
-      return isLoggedIn; // Para todas as outras rotas, exige login
+      return isLoggedIn;
     },
     async jwt({ token, user }) {
       if (user) {
@@ -43,5 +42,5 @@ export const authConfig = {
       return session;
     },
   },
-  providers: [], // Configurados em lib/auth.ts
+  providers: [],
 } satisfies NextAuthConfig;
