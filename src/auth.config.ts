@@ -7,26 +7,25 @@ export const authConfig = {
   callbacks: {
     authorized({ auth, request: { nextUrl } }) {
       const isLoggedIn = !!auth?.user;
-      const isApiAuthRoute = nextUrl.pathname.startsWith("/api/auth");
-      const isPublicRoute = nextUrl.pathname === "/login";
+      const isOnAdmin = nextUrl.pathname.startsWith("/admin");
+      const isOnLogin = nextUrl.pathname === "/login";
 
-      if (isApiAuthRoute) return true;
+      // Permitir sempre as APIs de auth
+      if (nextUrl.pathname.startsWith("/api/auth")) return true;
 
-      if (isPublicRoute) {
+      if (isOnAdmin) {
+        if (isLoggedIn && auth?.user?.role === "ADMIN") return true;
+        return false; // Redireciona para login se não for admin
+      }
+
+      if (isOnLogin) {
         if (isLoggedIn) {
           return Response.redirect(new URL("/", nextUrl));
         }
         return true;
       }
 
-      if (!isLoggedIn) return false;
-
-      // Bloqueia /admin para quem não é ADMIN
-      if (nextUrl.pathname.startsWith("/admin") && auth?.user?.role !== "ADMIN") {
-        return Response.redirect(new URL("/", nextUrl));
-      }
-
-      return true;
+      return isLoggedIn; // Para todas as outras rotas, exige login
     },
     async jwt({ token, user }) {
       if (user) {
@@ -36,12 +35,12 @@ export const authConfig = {
       return token;
     },
     async session({ session, token }) {
-      if (session.user) {
+      if (session.user && token) {
         session.user.role = token.role as string;
         session.user.id = token.id as string;
       }
       return session;
     },
   },
-  providers: [],
+  providers: [], // Configurados em lib/auth.ts
 } satisfies NextAuthConfig;
